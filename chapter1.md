@@ -30,11 +30,6 @@ ejecuta las instrucciones desde la cónsola
 # The pre exercise code runs code to initialize the user's workspace.
 ```
 
-*** =sct
-```{r}
-# SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
-
-```
 *** =sample_code  
 ```{r}
 # descarga e instala el paquete shiny 
