@@ -1,48 +1,6 @@
 ---
 title            : Introducción a Shiny
-description      : "Introducción a la programación de aplicaciones Web con Shiny/R."
+description      : Introducción a la programación de aplicaciones Web con Shiny/R.
 university       : Synergy Vision
 difficulty_level : 2
 time_needed      : 1 hour  
-
---- type:NormalExercise lang:r xp:50 skills:1
-## Conociendo R Shiny
-
-Shiny es framework (marco) para desarrollos web vía R, el mismo consta de un web Socket que permite contruir páginas HTML, y tener un servidor lógico de operaciones todo escrito en lenguaje R, además tiene características integradas con RStudio® la cual son altamente recomendables.
-
-Para utilizar dicho framework debes instalar el paquete "shiny" desde el CRAN
-
-```
-install.packages("shiny")
-library("Shiny")
-
-```
-
- 
-*** =instructions
-- Instalar paquete desde la consola.
-- Activar Librería
-
-*** =hint
-ejecuta las instrucciones desde la cónsola
-
-*** =pre_exercise_code
-```{r}
-# The pre exercise code runs code to initialize the user's workspace.
-```
-
-*** =sct
-```{r}
-# SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
-
-```
-*** =sample_code  
-```{r}
-# descarga e instala el paquete shiny 
-install.packages()
-library()
-
-# de esta manera podremos iniciar
-```
-
-  
