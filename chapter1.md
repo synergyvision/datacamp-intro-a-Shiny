@@ -4,7 +4,7 @@ description : Vamos a repasar cómo es una página Web y cómo se construyen con
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
---- type:NormalExercise lang:r xp:50 skills:1
+--- type:NormalExercise lang:r xp:50 skills:1 key:9bffcc9c53
 ## Conociendo R Shiny
 
 Shiny es framework (marco) para desarrollos web vía R, el mismo consta de un web Socket que permite contruir páginas HTML, y tener un servidor lógico de operaciones todo escrito en lenguaje R, además tiene características integradas con RStudio® la cual son altamente recomendables.
