@@ -37,6 +37,7 @@ library("shiny")
 *** =sct
 ```{r}
 #no sct
+success_msg("¡Muy Bien!")
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:4edcf5dc7b
@@ -77,4 +78,7 @@ runExample()
 *** =sct
 ```{r}
 #no sct
+success_msg("¡Excelente!")
 ```
+
+
