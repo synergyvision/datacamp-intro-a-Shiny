@@ -94,6 +94,7 @@ Primero cargar el paquete "Shiny" a través de la instrucción __library()__.
 defina la intefáz de usuario con la función __pageWithSideBar__.
 defina el servidor lógico a través de la función __function(input, output)__.
 coloque la sentencia para levantar la aplicación.
+
 *** =hint
 
 Cargue el paquete usando library("shiny").
@@ -114,11 +115,11 @@ library(shiny)
 
 #defina la interfaz de usuario
 
-ui <-
+#ui <-
 
 #defina el servidor lógico
 
-server <- 
+#server <- 
 
 #coloque la sentencia para levantar la aplicación
 
@@ -135,15 +136,13 @@ library("shiny")
 
 #defina la interfaz de usuario
 
-ui <- pageWithSideBar()
+#ui <- pageWithSideBar()
 
 #defina el servidor lógico
 
-server <- function(input, output) {
+#server <- function(input, output) {}
 
-}
-
-shinyApp(ui, server)
+#shinyApp(ui, server)
 
 ```
 
