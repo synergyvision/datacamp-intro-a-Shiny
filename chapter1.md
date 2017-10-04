@@ -155,7 +155,7 @@ success_msg("¡Excelente!")
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:2b2df8f7aa
 
-## Estructura y Componentes Principales *Interfaz de Usuario*
+## Estructura y Componentes Principales UI
 
 En la parte de la interfaz de usuario las zonas de la aplicación se determinan a través de 3 funciones: el título se establece  a través de la función ``` headerPanel()```, panel lateral de opciones  con la función```  sidebarPanel() ``` y el panel principal con ```mainPanel()``` todo esto en el caso que se utilice la función ```pageWithSideBar``` para establecer la interfaz de usuario de su aplicación y separando cada función con coma ","  y las funciones para definir las zonas serán escritas como parámetros de la función principal. 
 
@@ -214,7 +214,7 @@ success_msg("sígue así")
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:134f82e24f
 
-## Estructura y Componentes Principales *Interfaz de Usuario* (continuación)
+## Estructura y Componentes Principales UI (continuación)
 
 Otra de las opciones para definir la interfaz de usuario es la función ``` fluidPage() ```  y análogamente se utilizan funciones especificas para definir las zonas de la aplicación la unica diferencia es que las fuciones correspondientes a los paneles internos (lateral y principal) van escritos dentro de la función ```sidebarLayout()``` esto más adelante nos permitirá realizar configuraciones adicionales para mostrar varias salidas y ordenarlas en una estructura definida.
 
@@ -282,4 +282,94 @@ library("shiny")
 *** =sct
 ```{r}
 success_msg("muy bien, rumbo a tu primera aplicación con R Shiny")
+```
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:aceaef451b
+## Componentes de Entradas y Salidas.  
+
+la interfaz de usuario de las aplicaciones en R Shiny contiene elementos para ingresar datos y otros elemento donde se muestrna las salidas luego de ser procesadas por las funciones R a través del servidor lógico.
+
+corriendo el primer ejemplo por defecto que trae el paquete shiny con la siguiente instrucción:
+
+```
+library("shiny")  
+runExample("01_hello")
+```
+
+![](http://s3.amazonaws.com/assets.datacamp.com/production/course_5138/datasets/shinyExample1.png)
+
+como se aprecia en la gráfica la interfaz de ejemplo consta de 3 elementos bien diferenciados que son el título, el panel lateral y el panel principal. En general el título sirve para identificar la aplicación, el panel lateral sirve para colocar los *input* o entradas de datos a procesar, y el panel principal para colocar los elementos de salidas o *output* como resultados despues del procesamiento del servidor. ahora veremos cuales son los tipos de elementos de entrada disponibles a continuación:
+
++ numericInput  
++ sliderInput  
++ textInput  
++ selectInput
++ radioButtons
++ checkboxGroupInput
++ checkboxInput
++ dateInput
++ dateRangeInput
++ actionButton
++ submitButton
++ fileInput
+
+Estos elementos son funciones que tiene parámetros que más adelante lo vamos a definir con detalle. Es de notar que estos elementos deben estar insertados dentro de la función ```sidebarPanel()``` además tienen un parámetro en común que es el "InputId" que no es más que el identificador o el nombre con lo cual el sistema ubica dicho elemento
+
+
+*** =instructions
+
+Coloque un elemento para ingresar números de nombre "primero" y uno para ingresar texto de nombre "abecedario" dentro de la interfaz de usuario
+
+*** =hint
+
+Use los entradas numericInput y textInput dentro del ambiente sidebarPanel.
+
+*** =pre_exercise_code
+```{r}
+library("shiny")
+```
+
+*** =sample_code
+```{r}
+# ui <- fluidPage(
+
+    # titlePanel("Vision With DataCamp fluidPage"),
+  
+  #sidebarLayout(
+  
+    # sidebarPanel(
+
+        #           ,
+        #           
+    ),
+  
+    # mainPanel())
+  
+  #)
+```
+
+*** =solution
+```{r}
+# ui <- fluidPage(
+
+    # titlePanel("Vision With DataCamp fluidPage"),
+  
+  #sidebarLayout(
+  
+    # sidebarPanel(
+
+        # numericInput("primero"),
+        # textInput("abecedario")          
+    ),
+  
+    # mainPanel())
+  
+  #)
+```
+
+*** =sct
+```{r}
+success_msg("Excelente estás ampliando tu interfaz")
 ```
