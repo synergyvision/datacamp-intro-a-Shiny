@@ -213,13 +213,13 @@ success_msg("sígue así")
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:134f82e24f
+
 ## Estructura y Componentes Principales *Interfaz de Usuario* (continuación)
 
 Otra de las opciones para definir la interfaz de usuario es la función ``` fluidPage() ```  y análogamente se utilizan funciones especificas para definir las zonas de la aplicación la unica diferencia es que las fuciones correspondientes a los paneles internos (lateral y principal) van escritos dentro de la función ```sidebarLayout()``` esto más adelante nos permitirá realizar configuraciones adicionales para mostrar varias salidas y ordenarlas en una estructura definida.
 
 
 *** =instructions
-
 
 Colocar "Vision With DataCamp fluidPage" como título de su aplicación.
 establezca la región del panel lateral y del panel principal vacios
@@ -240,7 +240,7 @@ library("shiny")
 ```{r}
 # Define la interfaz de usuario con la función mencionada en la descripción del ejecicio
 
-#ui <- 
+# ui <- 
 
     # Título de la Aplicación
     #                         ,
@@ -262,7 +262,7 @@ library("shiny")
 ```{r}
 # Define la interfaz de usuario con la función mencionada en la descripción del ejecicio
 
-#ui <- fluidPage(
+# ui <- fluidPage(
 
     # Título de la Aplicación
     # titlePanel("Vision With DataCamp fluidPage"),
