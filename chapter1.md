@@ -149,5 +149,137 @@ library("shiny")
 
 *** =sct
 ```{r}
-#no sct
+success_msg("¡Excelente!")
+```
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:2b2df8f7aa
+
+## Estructura y Componentes Principales *Interfaz de Usuario*
+
+En la parte de la interfaz de usuario las zonas de la aplicación se determinan a través de 3 funciones: el título se establece  a través de la función ``` headerPanel()```, panel lateral de opciones  con la función```  sidebarPanel() ``` y el panel principal con ```mainPanel()``` todo esto en el caso que se utilice la función ```pageWithSideBar``` para establecer la interfaz de usuario de su aplicación y separando cada función con coma ","  y las funciones para definir las zonas serán escritas como parámetros de la función principal. 
+
+*** =instructions
+
+Colocar "Vision With DataCamp" como título de su aplicación.
+establezca la región del panel lateral y del panel principal vacios
+
+*** =hint
+
+usar ``` headerPanel()```, ```  sidebarPanel() ``` y ```mainPanel()``` respectivamente.
+
+*** =pre_exercise_code
+```{r}
+library("shiny")
+```
+
+*** =sample_code
+```{r}
+# Define la interfaz de usuario con la función mencionada en la descripción del ejecicio
+
+#ui <- 
+
+  # Título de la Aplicación
+  #                         ,
+  
+  # Panel Lateral
+  #                         ,
+  
+  # Panel Principal
+  #                         )
+```
+
+*** =solution
+```{r}
+# Define la interfaz de usuario con la función mencionada en la descripción del ejecicio
+
+#ui <- pageWithSidebar(
+
+  # Título de la Aplicación
+  # headerPanel("Vision with DataCamp"),
+  
+  # Panel Lateral
+  # sidebarPanel(),
+  
+  # Panel Principal
+  # mainPanel() )
+```
+
+*** =sct
+```{r}
+success_msg("sígue así")
+```
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:134f82e24f
+## Estructura y Componentes Principales *Interfaz de Usuario* (continuación)
+
+Otra de las opciones para definir la interfaz de usuario es la función ``` fluidPage() ```  y análogamente se utilizan funciones especificas para definir las zonas de la aplicación la unica diferencia es que las fuciones correspondientes a los paneles internos (lateral y principal) van escritos dentro de la función ```sidebarLayout()``` esto más adelante nos permitirá realizar configuraciones adicionales para mostrar varias salidas y ordenarlas en una estructura definida.
+
+
+*** =instructions
+
+
+Colocar "Vision With DataCamp fluidPage" como título de su aplicación.
+establezca la región del panel lateral y del panel principal vacios
+
+
+*** =hint
+
+recuerde colocar las funciones de los paneles lateral y principal como parámetros dentro de la función ```sidebarLayout()``` 
+
+*** =pre_exercise_code
+```{r}
+
+library("shiny")
+
+```
+
+*** =sample_code
+```{r}
+# Define la interfaz de usuario con la función mencionada en la descripción del ejecicio
+
+#ui <- 
+
+    # Título de la Aplicación
+    #                         ,
+  
+  #
+  
+    # Panel Lateral
+    #                         ,
+  
+    # Panel Principal
+    #                         )
+  
+  #)
+ 
+
+```
+
+*** =solution
+```{r}
+# Define la interfaz de usuario con la función mencionada en la descripción del ejecicio
+
+#ui <- fluidPage(
+
+    # Título de la Aplicación
+    # titlePanel("Vision With DataCamp fluidPage"),
+  
+  #sidebarLayout(
+  
+    # Panel Lateral
+    # sidebarPanel(),
+  
+    # Panel Principal
+    # mainPanel())
+  
+  #)
+  
+```
+
+*** =sct
+```{r}
+success_msg("muy bien, rumbo a tu primera aplicación con R Shiny")
 ```
