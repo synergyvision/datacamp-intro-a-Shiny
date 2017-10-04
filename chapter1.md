@@ -149,5 +149,5 @@ shinyApp(ui, server)
 
 *** =sct
 ```{r}
-no sct
+#no sct
 ```
