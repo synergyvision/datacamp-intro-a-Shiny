@@ -321,7 +321,7 @@ Estos elementos son funciones que tiene parámetros que más adelante lo vamos a
 
 *** =instructions
 
-Coloque un elemento para ingresar números de cuyo identificador sea "primero" y uno para ingresar texto identificador sea "abecedario" dentro de la interfaz de usuario.
+Coloque un elemento para ingresar números de cuyo identificador sea "primero" y uno para ingresar texto identificador sea "abecedario"  y cuyo parámetro "label" sea igual a "Vision" dentro de la interfaz de usuario.
 
 *** =hint
 
@@ -359,8 +359,8 @@ library("shiny")
     # sidebarLayout(
     # sidebarPanel(
 
-        # numericInput("primero"),
-        # textInput("abecedario")),
+        # numericInput(inputId = "primero"),
+        # textInput(inputId = "abecedario", label = "Vision")),
   
     # mainPanel())
   
@@ -413,7 +413,7 @@ library("shiny")
     # sidebarLayout(
     # sidebarPanel(
 
-        # textInput("abecedario")),
+        # textInput(inputId = "abecedario", label = "Vision")),
   
     # mainPanel(
     
@@ -434,12 +434,12 @@ library("shiny")
     # sidebarLayout(
     # sidebarPanel(
 
-        # textInput("abecedario")),
+        # textInput(inputId = "abecedario")),
   
     # mainPanel(
     
     #coloque una función de salida para texto
-    # textOutput("abecedarioOutput")
+    # textOutput(outputId = "abecedarioOutput")
     
     #))
   
@@ -451,32 +451,104 @@ library("shiny")
 success_msg("Excelente")
 ```
 
-
-
 --- type:NormalExercise lang:r xp:100 skills:1 key:6997f0f5fe
 ## Servidor Lógico __server.R__
+
+El Servidor Lógico es el que ejecuta  y procesa las acciones requeridas en las aplicaciones R Shiny, el mismo recibe instrucciones mediante los input y los procesos son expresados en script de R. Estos se colocan como parte de la variable server dentro de la función ```function(input, output){...}```, los mismos se llaman a través de variables y funciones de la forma ```output$"Id-output" <- render"*"({...})``` donde el __Id-output__: es el nombre o identificador del elemento de salida en la interfaz de usuario y "*" es la contraparte del servidor lógico de la salida en la UI. ejemplo para un ```verbatimOutput("primeroOutput")``` correspondiente a una salida numérica en la UI, y con un ```numericInput("primero")``` como entrada de datos, la configuración quedaría:
+
+~~~
+server <- function(input, output){
+
+output$primeroOutput <- renderPrint({
+
+  input$primero
+})
+
+}
+
+~~~
 
 
 *** =instructions
 
+Configurar a través del servidor lógico la salida de la interfaz de usuario descrita en el código de ejemplo.
+
 *** =hint
+
+Use la función ```renderText()``` dentro del ambiente del servidor lógico
 
 *** =pre_exercise_code
 ```{r}
-
+library(shiny)
 ```
 
 *** =sample_code
 ```{r}
+# ui <- fluidPage(
 
+    # titlePanel("Vision With DataCamp fluidPage"),
+  
+    # sidebarLayout(
+    # sidebarPanel(
+
+        # textInput(inputId = "abecedario", label = "Vision")),
+  
+    # mainPanel(
+    
+    #coloque una función de salida para texto
+    # textOutput(outputId = "abecedarioOutput")
+    
+    #))
+  
+  #)
+  
+# server <- function(input, output) {
+
+    #output$... <- render...({
+
+  #input$...
+
+#})
+
+#}
+  
+  
 ```
 
 *** =solution
 ```{r}
+# ui <- fluidPage(
 
+    # titlePanel("Vision With DataCamp fluidPage"),
+  
+    # sidebarLayout(
+    # sidebarPanel(
+
+        # textInput(inputId = "abecedario", label = "Vision")),
+  
+    # mainPanel(
+    
+    #coloque una función de salida para texto
+    # textOutput(outputId = "abecedarioOutput")
+    
+    #))
+  
+  #)
+  
+# server <- function(input, output) {
+
+    #output$abecedarioOutput <- renderText({
+
+  #input$abecedario
+
+#})
+
+#}
+  
+# shinyApp(ui, server)  
 ```
 
 *** =sct
 ```{r}
-
+success_msg("Felicitaciones ya tienes los elementos básicos para construir una aplicación R Shiny")
 ```
