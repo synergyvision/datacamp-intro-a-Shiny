@@ -371,3 +371,82 @@ library("shiny")
 ```{r}
 success_msg("Excelente estás ampliando tu interfaz")
 ```
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:09b800273c
+## Componentes de Salida.
+
+Los components de salidas en las aplicaciones shiny generalmente se colocan en el panel principal, por lo cual se deben colocar como argumentos dentro de la función ```mainPanel()```, además los mismo deben ser configurados en el servidor lógico ```server.R```, por tanto cada salida tiene su contraparte en el servidor lógico, a continuación te mostramos las principales salidas con sus contraparte en el archivo ```server.R```. Además estas funciones tambien debe colocarsele sus identificadores 
+
+| mainPanel          | server.R        |
+|--------------------|-----------------|
+| textOutput         | renderText      |
+| verbatimTextOutput | renderPrint     |
+| htmlOutput         | renderPrint     |
+| tableOutput        | renderTable     |
+| imageOutput        | imageOutput     |
+| uiOutput           | renderUI        |
+| downloadButton     | downloadHandler |
+
+
+*** =instructions
+
++ Coloque como argumento de la función ```mainPanel()``` una salida de texto cuyo identificador sea "abecedarioOutput"
+
+
+*** =hint
+
+Debe elegir la función "textOutput()" 
+
+*** =pre_exercise_code
+```{r}
+library("shiny")
+```
+
+*** =sample_code
+```{r}
+# ui <- fluidPage(
+
+    # titlePanel("Vision With DataCamp fluidPage"),
+  
+    # sidebarLayout(
+    # sidebarPanel(
+
+        # textInput("abecedario")),
+  
+    # mainPanel(
+    
+    #coloque una función de salida para texto
+    #
+    
+    #))
+  
+  #)
+```
+
+*** =solution
+```{r}
+# ui <- fluidPage(
+
+    # titlePanel("Vision With DataCamp fluidPage"),
+  
+    # sidebarLayout(
+    # sidebarPanel(
+
+        # textInput("abecedario")),
+  
+    # mainPanel(
+    
+    #coloque una función de salida para texto
+    # textOutput("abecedarioOutput")
+    
+    #))
+  
+  #)
+```
+
+*** =sct
+```{r}
+success_msg("Excelente")
+```
