@@ -86,7 +86,7 @@ success_msg("¡Excelente!")
 --- type:NormalExercise lang:r xp:100 skills:1 key:205e741e77
 ## Estructura y Componentes Principales
 
-Vamos a aprender como están estructuradas las aplicaciones en shiny, las mismas no son más que un conjunto de directorios y archivos que contienen un script de R ```app.R``` en el caso de las aplicaciones sencillas. En este caso tanto la interfáz del usuario como el servidor lógico se definen como objetos a través de funciones especificas como ```pageWithSideBar``` , ```fluidPage```, ```fixedPage``` para el ui y para el servidor lógico ```function(input, output)``` del paquete shiny. al final el script debe contener la sentencia ```shinyApp(ui, server)``` que hace que la aplicación levante.
+Vamos a aprender como están estructuradas las aplicaciones en shiny, las mismas no son más que un conjunto de directorios y archivos que contienen un script de R ```app.R``` en el caso de las aplicaciones sencillas. En este caso tanto la interfaz del usuario como el servidor lógico se definen como objetos a través de funciones especificas como ```pageWithSideBar``` , ```fluidPage```, ```fixedPage``` para el ui y para el servidor lógico ```function(input, output)``` del paquete shiny. al final el script debe contener la sentencia ```shinyApp(ui, server)``` que hace que la aplicación levante.
 
 *** =instructions
 
@@ -163,7 +163,7 @@ En la parte de la interfaz de usuario las zonas de la aplicación se determinan 
 *** =instructions
 
 Colocar "Vision With DataCamp" como título de su aplicación.
-establezca la región del panel lateral y del panel principal vacios
+establezca la región del panel lateral y del panel principal vacíos
 
 *** =hint
 
@@ -218,13 +218,13 @@ success_msg("sígue así")
 
 ## Estructura y Componentes Principales UI (continuación)
 
-Otra de las opciones para definir la interfaz de usuario es la función ``` fluidPage() ```  y análogamente se utilizan funciones especificas para definir las zonas de la aplicación la unica diferencia es que las fuciones correspondientes a los paneles internos (lateral y principal) van escritos dentro de la función ```sidebarLayout()``` esto más adelante nos permitirá realizar configuraciones adicionales para mostrar varias salidas y ordenarlas en una estructura definida.
+Otra de las opciones para definir la interfaz de usuario es la función ``` fluidPage() ```  y análogamente se utilizan funciones especificas para definir las zonas de la aplicación la única diferencia es que las funciones correspondientes a los paneles internos (lateral y principal) van escritos dentro de la función ```sidebarLayout()``` esto más adelante nos permitirá realizar configuraciones adicionales para mostrar varias salidas y ordenarlas en una estructura definida.
 
 
 *** =instructions
 
 Colocar "Vision With DataCamp fluidPage" como título de su aplicación.
-establezca la región del panel lateral y del panel principal vacios
+establezca la región del panel lateral y del panel principal vacíos
 
 
 *** =hint
@@ -292,7 +292,7 @@ success_msg("muy bien, rumbo a tu primera aplicación con R Shiny")
 --- type:NormalExercise lang:r xp:100 skills:1 key:aceaef451b
 ## Componentes de Entradas y Salidas.  
 
-la interfaz de usuario de las aplicaciones en R Shiny contiene elementos para ingresar datos y otros elemento donde se muestrna las salidas luego de ser procesadas por las funciones R a través del servidor lógico.
+la interfaz de usuario de las aplicaciones en R Shiny contiene elementos para ingresar datos y otros elemento donde se muestran las salidas luego de ser procesadas por las funciones R a través del servidor lógico.
 
 corriendo el primer ejemplo por defecto que trae el paquete shiny con la siguiente instrucción:
 
@@ -304,7 +304,7 @@ runExample("01_hello")
 
 ![](http://s3.amazonaws.com/assets.datacamp.com/production/course_5138/datasets/shinyExample1.png)  
 
-como se aprecia en la gráfica la interfaz de ejemplo consta de 3 elementos bien diferenciados que son el título, el panel lateral y el panel principal. En general el título sirve para identificar la aplicación, el panel lateral sirve para colocar los *input* o entradas de datos a procesar, y el panel principal para colocar los elementos de salidas o *output* como resultados despues del procesamiento del servidor. ahora veremos cuales son los tipos de elementos de entrada disponibles a continuación:
+como se aprecia en la gráfica la interfaz de ejemplo consta de 3 elementos bien diferenciados que son el título, el panel lateral y el panel principal. En general el título sirve para identificar la aplicación, el panel lateral sirve para colocar los *input* o entradas de datos a procesar, y el panel principal para colocar los elementos de salidas o *output* como resultados después del procesamiento del servidor. ahora veremos cuales son los tipos de elementos de entrada disponibles a continuación:
 
 + numericInput  
 + sliderInput   
@@ -381,7 +381,7 @@ success_msg("Excelente estás ampliando tu interfaz")
 --- type:NormalExercise lang:r xp:100 skills:1 key:09b800273c
 ## Componentes de Salida.
 
-Los components de salidas en las aplicaciones shiny generalmente se colocan en el panel principal, por lo cual se deben colocar como argumentos dentro de la función ```mainPanel()```, además los mismo deben ser configurados en el servidor lógico ```server.R```, por tanto cada salida tiene su contraparte en el servidor lógico, a continuación te mostramos las principales salidas con sus contraparte en el archivo ```server.R```. Además estas funciones tambien debe colocarsele sus identificadores 
+Los componentes de salidas en las aplicaciones shiny generalmente se colocan en el panel principal, por lo cual se deben colocar como argumentos dentro de la función ```mainPanel()```, además los mismo deben ser configurados en el servidor lógico ```server.R```, por tanto cada salida tiene su contraparte en el servidor lógico, a continuación te mostramos las principales salidas con sus contraparte en el archivo ```server.R```. Además estas funciones también debe colocarsele sus identificadores 
 
 | mainPanel          | server.R        |
 |--------------------|-----------------|
