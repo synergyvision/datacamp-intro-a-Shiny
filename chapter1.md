@@ -296,31 +296,32 @@ corriendo el primer ejemplo por defecto que trae el paquete shiny con la siguien
 ```
 library("shiny")  
 runExample("01_hello")
+
 ```
 
-![](http://s3.amazonaws.com/assets.datacamp.com/production/course_5138/datasets/shinyExample1.png)
+![](http://s3.amazonaws.com/assets.datacamp.com/production/course_5138/datasets/shinyExample1.png)  
 
 como se aprecia en la gráfica la interfaz de ejemplo consta de 3 elementos bien diferenciados que son el título, el panel lateral y el panel principal. En general el título sirve para identificar la aplicación, el panel lateral sirve para colocar los *input* o entradas de datos a procesar, y el panel principal para colocar los elementos de salidas o *output* como resultados despues del procesamiento del servidor. ahora veremos cuales son los tipos de elementos de entrada disponibles a continuación:
 
 + numericInput  
-+ sliderInput  
-+ textInput  
-+ selectInput
-+ radioButtons
-+ checkboxGroupInput
-+ checkboxInput
-+ dateInput
-+ dateRangeInput
-+ actionButton
-+ submitButton
-+ fileInput
++ sliderInput   
++ textInput    
++ selectInput  
++ radioButtons  
++ checkboxGroupInput  
++ checkboxInput  
++ dateInput  
++ dateRangeInput  
++ actionButton  
++ submitButton  
++ fileInput  
 
-Estos elementos son funciones que tiene parámetros que más adelante lo vamos a definir con detalle. Es de notar que estos elementos deben estar insertados dentro de la función ```sidebarPanel()``` además tienen un parámetro en común que es el "InputId" que no es más que el identificador o el nombre con lo cual el sistema ubica dicho elemento
+Estos elementos son funciones que tiene parámetros que más adelante lo vamos a definir con detalle. Es de notar que estos elementos deben estar insertados dentro de la función ```sidebarPanel()``` además tienen un parámetro en común que es el "InputId" que no es más que el identificador o el nombre con lo cual el sistema ubica dicho elemento.  
 
 
 *** =instructions
 
-Coloque un elemento para ingresar números de nombre "primero" y uno para ingresar texto de nombre "abecedario" dentro de la interfaz de usuario
+Coloque un elemento para ingresar números de cuyo identificador sea "primero" y uno para ingresar texto identificador sea "abecedario" dentro de la interfaz de usuario.
 
 *** =hint
 
@@ -337,13 +338,12 @@ library("shiny")
 
     # titlePanel("Vision With DataCamp fluidPage"),
   
-  #sidebarLayout(
+  # sidebarLayout(
   
     # sidebarPanel(
 
         #           ,
-        #           
-    ),
+        #           ),
   
     # mainPanel())
   
@@ -356,13 +356,11 @@ library("shiny")
 
     # titlePanel("Vision With DataCamp fluidPage"),
   
-  #sidebarLayout(
-  
+    # sidebarLayout(
     # sidebarPanel(
 
         # numericInput("primero"),
-        # textInput("abecedario")          
-    ),
+        # textInput("abecedario")),
   
     # mainPanel())
   
