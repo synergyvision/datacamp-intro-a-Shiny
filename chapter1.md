@@ -456,7 +456,7 @@ success_msg("Excelente")
 
 El Servidor Lógico es el que ejecuta  y procesa las acciones requeridas en las aplicaciones R Shiny, el mismo recibe instrucciones mediante los input y los procesos son expresados en script de R. Estos se colocan como parte de la variable server dentro de la función ```function(input, output){...}```, los mismos se llaman a través de variables y funciones de la forma ```output$"Id-output" <- render"*"({...})``` donde el __Id-output__: es el nombre o identificador del elemento de salida en la interfaz de usuario y "*" es la contraparte del servidor lógico de la salida en la UI. ejemplo para un ```verbatimOutput("primeroOutput")``` correspondiente a una salida numérica en la UI, y con un ```numericInput("primero")``` como entrada de datos, la configuración quedaría:
 
-~~~
+```
 server <- function(input, output){
 
 output$primeroOutput <- renderPrint({
@@ -466,7 +466,7 @@ output$primeroOutput <- renderPrint({
 
 }
 
-~~~
+```
 
 
 *** =instructions
