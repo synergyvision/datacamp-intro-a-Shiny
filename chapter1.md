@@ -36,7 +36,7 @@ library("shiny")
 
 *** =sct
 ```{r}
-#no sct
+msg = "¡Buen Inicio!"
 success_msg("¡Muy Bien!")
 ```
 
@@ -77,7 +77,7 @@ runExample()
 
 *** =sct
 ```{r}
-#no sct
+msg = "Aprendiendo con la acción"
 success_msg("¡Excelente!")
 ```
 
@@ -149,6 +149,7 @@ library("shiny")
 
 *** =sct
 ```{r}
+msg = "¡Ánimo!"
 success_msg("¡Excelente!")
 ```
 
@@ -207,6 +208,7 @@ library("shiny")
 
 *** =sct
 ```{r}
+msg = "¡Ya conoces los elementos fundamentales!"
 success_msg("sígue así")
 ```
 
@@ -281,6 +283,7 @@ library("shiny")
 
 *** =sct
 ```{r}
+msg = "Conociendo otras opciones"
 success_msg("muy bien, rumbo a tu primera aplicación con R Shiny")
 ```
 
@@ -369,6 +372,7 @@ library("shiny")
 
 *** =sct
 ```{r}
+msg = "¡Asombroso! ya puedes contruir una interfaz de usuario"
 success_msg("Excelente estás ampliando tu interfaz")
 ```
 
@@ -448,6 +452,7 @@ library("shiny")
 
 *** =sct
 ```{r}
+msg = "¡Genial! ya puedes configurar tus salidas"
 success_msg("Excelente")
 ```
 
@@ -550,5 +555,6 @@ library(shiny)
 
 *** =sct
 ```{r}
+msg = "¡Lo hiciste! ya puedes hacer tus aplicaciones con R"
 success_msg("Felicitaciones ya tienes los elementos básicos para construir una aplicación R Shiny")
 ```
