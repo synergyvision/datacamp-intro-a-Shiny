@@ -1,5 +1,7 @@
-title            : Introducción a Shiny
-description      : Introducción a la programación de aplicaciones Web con Shiny/R.
-university       : Synergy Vision
-difficulty_level : 2
-time_needed      : 1 hour  
+title: Introducción a Shiny
+description: Introducción a la programación de aplicaciones Web con Shiny/R.
+university: Synergy Vision
+difficulty_level: 2
+time_needed: 1 hour
+datasets:
+  shinyExample1.png: Shinyexample1
