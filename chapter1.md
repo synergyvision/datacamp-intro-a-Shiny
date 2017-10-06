@@ -292,7 +292,7 @@ success_msg("muy bien, rumbo a tu primera aplicación con R Shiny")
 --- type:NormalExercise lang:r xp:100 skills:1 key:aceaef451b
 ## Componentes de Entradas y Salidas.  
 
-la interfaz de usuario de las aplicaciones en R Shiny contiene elementos para ingresar datos y otros elemento donde se muestran las salidas luego de ser procesadas por las funciones R a través del servidor lógico.
+la interfaz de usuario de las aplicaciones en R Shiny contiene elementos para ingresar datos y otros elemento donde se muestran las salidas luego de ser procesadas por las funciones  escritas en R a través del servidor lógico.
 
 corriendo el primer ejemplo por defecto que trae el paquete shiny con la siguiente instrucción:
 
@@ -301,10 +301,12 @@ library("shiny")
 runExample("01_hello")
 
 ```
+obtenemos
+
 
 ![](http://s3.amazonaws.com/assets.datacamp.com/production/course_5138/datasets/shinyExample1.png)  
 
-como se aprecia en la gráfica la interfaz de ejemplo consta de 3 elementos bien diferenciados que son el título, el panel lateral y el panel principal. En general el título sirve para identificar la aplicación, el panel lateral sirve para colocar los *input* o entradas de datos a procesar, y el panel principal para colocar los elementos de salidas o *output* como resultados después del procesamiento del servidor. ahora veremos cuales son los tipos de elementos de entrada disponibles a continuación:
+Como se aprecia en la gráfica la interfaz de ejemplo consta de 3 elementos bien diferenciados que son el título, el panel lateral y el panel principal. En general el título sirve para identificar la aplicación, el panel lateral sirve para colocar los *input* o entradas de datos a procesar, y el panel principal para colocar los elementos de salidas o *output* como resultados después del procesamiento del servidor. ahora veremos cuales son los tipos de elementos de entrada disponibles a continuación:
 
 + numericInput  
 + sliderInput   
@@ -324,7 +326,7 @@ Estos elementos son funciones que tiene parámetros que más adelante lo vamos a
 
 *** =instructions
 
-Coloque un elemento para ingresar números de cuyo identificador sea "primero" y uno para ingresar texto identificador sea "abecedario"  y cuyo parámetro "label" sea igual a "Vision" dentro de la interfaz de usuario.
+Coloque un elemento para ingresar números cuyo identificador sea "primero" y uno para ingresar texto identificador sea "abecedario" y que el parámetro "label" sea igual a "Vision" dentro de la interfaz de usuario.
 
 *** =hint
 
